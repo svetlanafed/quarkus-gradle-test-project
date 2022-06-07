@@ -1,8 +1,12 @@
 package com.svetlanafedorova.domain;
 
+import org.eclipse.microprofile.openapi.annotations.media.Schema;
+
+@Schema(name = "movie", description = "Movie representation")
 public class Movie {
 
     private Long id;
+    @Schema(required = true)
     private String title;
 
     public Long getId() {
